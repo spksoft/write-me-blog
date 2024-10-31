@@ -1,0 +1,29 @@
+learn_about_topic_task:
+  description: >
+    Learn about {topic} and write a note about it. for make it easy to understand. Attach code examples, diagrams(mermaidjs) and images.
+    Try to search more information from the internet and read more document to make your note more complete.
+    You have intention to know about {blog_intention}.
+    Reference Link: {reference}
+
+    if you think it not enough information, you can search more information and read more document.
+    Note should have many section and each section should have many sub-section,detail, example and diagrams.
+  expected_output: >
+    A learning note about {topic} with code examples, diagrams(mermaidjs) and images.
+    Formatted as markdown.
+  agent: senior_software_engineer
+  output_file: "output/learn_note.md"
+
+write_blog_post_task:
+  description: >
+    Write a blog post about {topic} and publish it to your blog and social media for get high engagement.
+    Learn from the note about {topic} from engineering team but if you think it not enough information, you can search more information and read more document.
+
+    Writing style should be easy to read and understand, friendly and engaging.
+    Blog should not too long and too short. it should make audience spend {read_time} minutes to read.
+    You like to write blog for sharing about {topic} with {blog_intention}.
+  expected_output: >
+    A blog post about {topic} with code examples, diagrams(mermaidjs) and images.
+    Blog language must be {language}. if language is not English, you should use Transliteration for technical term words.
+    Formatted as markdown.
+  agent: senior_tech_evangelist
+  output_file: "output/blog_post.md"

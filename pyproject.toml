@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "write_me_blog"
+version = "0.1.0"
+description = "write-me-blog using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = ">=0.70.1,<1.0.0" }
+langtrace_python_sdk = ">=3.0.0,<3.2.0"
+
+
+[tool.poetry.scripts]
+write_me_blog = "write_me_blog.main:run"
+run_crew = "write_me_blog.main:run"
+train = "write_me_blog.main:train"
+replay = "write_me_blog.main:replay"
+test = "write_me_blog.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
